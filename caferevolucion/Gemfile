@@ -35,6 +35,9 @@ end
 # Twitter bootstrap gem
 gem "twitter-bootstrap-rails"
 
+# Devise para el control de usuarios
+gem "devise"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
