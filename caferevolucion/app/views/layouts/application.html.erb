@@ -1,14 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Caferevolucion</title>
+  <meta charset="utf-8">
+  <title>Café Revolución</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<!-- Empieza menú -->
+<div class='navbar navbar-fluid-top'>
+    <div class='container'>
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">  
+              <span class="icon-bar"></span>  
+              <span class="icon-bar"></span>  
+              <span class="icon-bar"></span>  
+      </a>
+      <div class='nav-collapse'>
+        <ul class="nav pull-right">                 
+          <li><a href="#">Registrarse</a></li>
+            <li class="divider-vertical"></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" href="#" data-toggle="dropdown">Entrar<strong class="caret"></strong></a>
+                <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+                <!-- Forma para login -->
+                  <form class="form-signin">
+                  <input type="text" class="input-block-level" placeholder="E-mail">
+                  <input type="password" class="input-block-level" placeholder="Password">
+                  <label class="checkbox">
+                  <input type="checkbox" value="remember-me"> Recordarme
+                  </label>
+                  <button class="signup btn" type="submit">Entrar</button>
+                  </form>
+                <!-- Termina forma -->
+            	</div>
+         	</li>
+        </ul>
+      </div>
+    </div>  
+</div>
+<!-- Termina menú -->
+
+<!-- Comineza contenido -->
+<div class="container" style="width:100%;">
+  <%= yield %>
+</div>
+<!-- Termina contenido -->
+
+    <!-- Le javascript  -->
+    <script src="twitter-bootstrap-v2/docs/assets/js/jquery.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-transition.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-alert.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-modal.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-dropdown.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-scrollspy.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-tab.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-tooltip.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-popover.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-button.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-collapse.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-carousel.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-typeahead.js"></script>
 
 </body>
 </html>
