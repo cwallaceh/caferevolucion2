@@ -1,4 +1,9 @@
 Caferevolucion::Application.routes.draw do
+
+root :to => 'browse#home'
+get "browse/profile"
+get "browse/aboutus"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
