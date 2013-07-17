@@ -1,6 +1,7 @@
 Caferevolucion::Application.routes.draw do
 
   devise_for :users
+  
 root :to => 'browse#home'
 get "browse/profile"
 get "browse/aboutus"
