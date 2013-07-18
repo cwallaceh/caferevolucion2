@@ -3,7 +3,6 @@ Caferevolucion::Application.routes.draw do
   devise_for :users
   
 root :to => 'browse#home'
-get "browse/profile"
 get "browse/aboutus"
 
   # The priority is based upon order of creation: first created -> highest priority.
