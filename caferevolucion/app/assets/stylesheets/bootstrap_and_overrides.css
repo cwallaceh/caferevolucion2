@@ -27,6 +27,10 @@ header {
 	padding: 140px 0 0;
 	position: relative;
 }
+section {
+	padding: 100px 10%;
+	text-align: center;
+}
 #main {
 	min-width: 1005px;
 	position: relative;
@@ -35,7 +39,7 @@ header {
 #main > header .hero-unit {
   background: url('/images/homepage-1-opacidad65.png') no-repeat center center fixed; 
   width: 100%;
-  height: 500px;
+  height: 460px;
   border-radius: 0px;
   background-size: cover;
   position: absolute;
@@ -95,7 +99,9 @@ header {
   position: absolute;
 }
 #about {
-	height: 500px;
+	height: 520px;
+    margin-top: 30px;
+    text-align: center;
 }
 /*Columns*/
 #intro .row .span4 {
