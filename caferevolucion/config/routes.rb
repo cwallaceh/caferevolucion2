@@ -1,10 +1,6 @@
 Caferevolucion::Application.routes.draw do
 
-  get "profile/index"
-  get "profile/show"
   devise_for :users
-
-  get '/profile/:id', :to => "profile#show", :as => :user
   
 root :to => 'browse#home'
 get "browse/aboutus"
