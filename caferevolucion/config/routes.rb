@@ -1,9 +1,14 @@
 Caferevolucion::Application.routes.draw do
 
+  #Base de usuarios
   devise_for :users
-  
+
+  #Ruta para profiles
+  get '/users/:id', :to => "users#show", :as => :user
+
 root :to => 'browse#home'
 get "browse/aboutus"
+get "users/show"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
