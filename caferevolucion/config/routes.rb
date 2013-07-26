@@ -1,5 +1,6 @@
 Caferevolucion::Application.routes.draw do
 
+  devise_for :admins
   #Base de usuarios
   devise_for :users
 
