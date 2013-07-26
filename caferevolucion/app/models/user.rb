@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
   validates :username, presence: true
-  validates :username, uniqueness: true, if: -> { self.username.present? }
   validates :username, :uniqueness => {:case_sensitive => false}
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
