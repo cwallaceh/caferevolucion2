@@ -2,10 +2,11 @@
   <div class="row-fluid">
     <div class="span2">
     <h4>Hola! <%= @user.username %> </h4>
-	<li><%= link_to "Home", root_path %></li>
+	   <li><%= link_to "Home", root_path %></li>
     </div>
     <div class="span10">
     <h4>Blog</h4>
+    <li><%= link_to "Escribir algo nuevo", new_post_path(user_id = @user.id) %></li>
     </div>
   </div>
 </div>
