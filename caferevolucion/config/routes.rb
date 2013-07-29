@@ -1,9 +1,5 @@
 Caferevolucion::Application.routes.draw do
 
-  resources :blogs do
-    resources :posts
-  end
-
   devise_for :admins
   #Base de usuarios
   devise_for :users
