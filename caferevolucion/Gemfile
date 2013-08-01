@@ -38,9 +38,6 @@ gem "twitter-bootstrap-rails"
 # Devise para el control de usuarios
 gem "devise"
 
-# Editor de texto WYSIWYG
-gem "bootstrap-wysihtml5-rails"
-
 # Paginas diferentes con gemas (ojala al final fuera infinte scroll)
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'

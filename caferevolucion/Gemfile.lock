@@ -31,8 +31,6 @@ GEM
     bcrypt-ruby (3.1.1-x86-mingw32)
     bootstrap-will_paginate (0.0.9)
       will_paginate
-    bootstrap-wysihtml5-rails (0.3.1.21)
-      railties (>= 3.0)
     builder (3.1.4)
     coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
@@ -132,7 +130,6 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-will_paginate
-  bootstrap-wysihtml5-rails
   coffee-rails (~> 4.0.0)
   devise
   jbuilder (~> 1.2)
