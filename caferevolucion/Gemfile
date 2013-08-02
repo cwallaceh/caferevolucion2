@@ -36,6 +36,9 @@ gem "twitter-bootstrap-rails"
 # Devise para el control de usuarios
 gem "devise"
 
+# CanCan para roles
+gem "cancan"
+
 # Paginas diferentes con gemas (ojala al final fuera infinte scroll)
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
