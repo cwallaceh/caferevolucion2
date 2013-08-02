@@ -23,17 +23,22 @@ a:hover {
 h1,h2,h3 {
   font-family: 'Roboto', sans-serif;
 }
+label[for="user_remember_me"] {
+  display: inline;
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
 header {
-	background: #000;
-	height: 440px;
-	text-align: center;
-	color: #fff;
-	padding: 140px 0 0;
-	position: relative;
+  background: #000;
+  height: 440px;
+  text-align: center;
+  color: #fff;
+  padding: 140px 0 0;
+  position: relative;
 }
 section {
-	padding: 100px 10%;
-	text-align: center;
+  padding: 100px 10%;
+  text-align: center;
 }
 /*  base */
 .inner-940 {
@@ -45,11 +50,12 @@ section {
   margin: 30px auto;
 }
 #main {
-	min-width: 1005px;
-	position: relative;
-	overflow: hidden;
+  min-width: 1005px;
+  position: relative;
+  overflow: hidden;
   margin-top: 30px;
 }
+
 #main > header .hero-unit {
   background: url('/images/homepage-1-opacidad65.png') no-repeat center center fixed; 
   width: 100%;
@@ -63,6 +69,9 @@ section {
   right: 0;
   z-index: 0;
   opacity: .9;
+}
+#main.front {
+  margin-top: 0px;
 }
 .navbar {
   background: none repeat scroll 0 0 #FFFFFF;
@@ -104,7 +113,7 @@ ul.navbar.pull-right li {
   text-transform: uppercase;
   float: right;
 }
-.signup.btn{
+/*.signup.btn{
   background: none repeat scroll 0 0 #00B27B;
   border-radius: 2px 2px 2px 2px;
   color: #FFFFFF;
@@ -112,7 +121,7 @@ ul.navbar.pull-right li {
   font-weight: bold;
   line-height: 1;
   padding: 11px 22px;
-}
+}*/
 .signup > a {
   color: #FFFFFF;
 }
@@ -134,7 +143,7 @@ ul.navbar.pull-right li {
   position: absolute;
 }
 #about {
-	height: 520px;
+  height: 520px;
     margin-top: 30px;
     text-align: center;
 }
@@ -189,3 +198,14 @@ h2.latest, h2.popular {
   width: 50%;
   float: right;
 }
+/* Modal specific styles */
+input[type="submit"] {
+    background: none repeat scroll 0 0 #00B27B;
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 11px 22px;
+    margin-top: 10px;
+} 
