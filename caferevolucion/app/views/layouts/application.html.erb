@@ -81,11 +81,9 @@
       <div class='nav-collapse'>
         <ul class="nav pull-right"> 
           <li><a href="#about">Acerca</a></li> 
-          <a class="btn" data-toggle="modal" href="#modal-signup" >Sign up</a>
-          <a class="btn" data-toggle="modal" href="#modal-signin" >Sign in</a>
-          <li><%= link_to "Sign up", new_user_registration_path %></li>
+          <li><a class="menu-modal" data-toggle="modal" href="#modal-signup" >Sign up</a></li>
           <li class="divider-vertical"></li>
-          <li><%= link_to "Sign in", new_user_session_path %></li>
+          <li><a class="menu-modal" data-toggle="modal" href="#modal-signin" >Sign in</a></li>
           <% end %>
         </ul>
       </div>

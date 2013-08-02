@@ -16,6 +16,10 @@ p {
 a {
   font-family: 'Roboto', sans-serif;
 }
+a:hover {
+  text-decoration: underline;
+  background-color: transparent;
+}
 h1,h2,h3 {
   font-family: 'Roboto', sans-serif;
 }
@@ -34,6 +38,11 @@ section {
 /*  base */
 .inner-940 {
   width: 940px;
+  margin: 0 auto;
+}
+.inner-420 {
+  width: 420px;
+  margin: 30px auto;
 }
 #main {
 	min-width: 1005px;
