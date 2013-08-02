@@ -71,8 +71,14 @@
       <% if user_signed_in? %>
       <div class='nav-collapse'>
         <ul class="nav pull-right">         
+<<<<<<< HEAD
           <li class="disabled"><a href="#">Conectado como: <%= current_user.email %>.</a></li>
+=======
+          <% if user_signed_in? %>
+          <li class="disabled"><a href="#">Conectado como: <%= current_user.username %>.</a></li>
+>>>>>>> 6837b47df0753ef1a69a44ec95f0a30a0aa87fa8
           <li><%= link_to "Profile", current_user %></li>
+          <li><%= link_to "Edit", edit_user_registration_path %></li>
 		      <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
         </ul>
         <a id="logo" href="/"></a>
