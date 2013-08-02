@@ -9,6 +9,7 @@
 @import "bootstrap-responsive";
 /*Custom Fonts*/
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&subset=latin,cyrillic-ext);
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700|Montserrat:400,700);
 /*Custom CSS for bootstrap classes*/
 p {
   font-family: 'Roboto', sans-serif;
@@ -21,7 +22,7 @@ a:hover {
   background-color: transparent;
 }
 h1,h2,h3 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 label[for="user_remember_me"] {
   display: inline;
@@ -48,6 +49,16 @@ section {
 .inner-420 {
   width: 420px;
   margin: 30px auto;
+}
+.title {
+  color: #00B27B;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+  padding: 10px 0;
+}
+.username {
+  text-transform: uppercase;
 }
 #main {
   min-width: 1005px;
