@@ -35,6 +35,7 @@ section {
 	min-width: 1005px;
 	position: relative;
 	overflow: hidden;
+  margin-top: 30px;
 }
 #main > header .hero-unit {
   background: url('/images/homepage-1-opacidad65.png') no-repeat center center fixed; 
