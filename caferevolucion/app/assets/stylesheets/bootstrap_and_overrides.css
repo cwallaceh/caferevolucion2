@@ -31,6 +31,10 @@ section {
 	padding: 100px 10%;
 	text-align: center;
 }
+/*  base */
+.inner-940 {
+  width: 940px;
+}
 #main {
 	min-width: 1005px;
 	position: relative;
