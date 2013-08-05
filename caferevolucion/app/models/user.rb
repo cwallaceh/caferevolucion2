@@ -1,7 +1,5 @@
 class User < ActiveRecord::Base
 
-ROLES = %w[admin moderator author banned]
-
   validates :username, presence: true
   validates :username, :uniqueness => {:case_sensitive => false}
   # Include default devise modules. Others available are:
