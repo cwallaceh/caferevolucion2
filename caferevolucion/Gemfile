@@ -39,6 +39,9 @@ gem "devise"
 # CanCan para roles
 gem "cancan"
 
+# Roles para CanCan
+gem "rolify"
+
 # Paginas diferentes con gemas (ojala al final fuera infinte scroll)
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
