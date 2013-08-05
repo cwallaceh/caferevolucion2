@@ -16,6 +16,8 @@ class Ability
         can :create, Post
         can :update, Post do |post|
             post.try(:user) == user
+        can :destroy, Post do |post|
+            post.try(:user) == user
     end
 
     if user.role? :banned

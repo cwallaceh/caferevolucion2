@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :signed_in_user, only: [:create, :destroy]
+  #load_and_authorize_resource
 
   def signed_in_user
     unless signed_in?
@@ -12,7 +13,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = current_user.posts.all
   end
 
   # GET /posts/1
@@ -48,6 +49,8 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
+    @post = current_user.posts(:id)
+    authorize! :update, @post
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
