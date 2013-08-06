@@ -36,6 +36,9 @@ gem "twitter-bootstrap-rails"
 # Devise para el control de usuarios
 gem "devise"
 
+# Forms,forms,forms
+gem 'simple_form'
+
 # CanCan para roles
 gem "cancan"
 
