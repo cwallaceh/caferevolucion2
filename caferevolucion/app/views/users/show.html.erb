@@ -10,7 +10,6 @@
       </div>
       <div class="span10 escritos">
       <% if @user.posts.any? %>
-        <h4>Escritos</h4>
               <%= render template: "posts/index" %>
       <% else %>
       <h3>Aún no existen escritos de esta persona</h3>

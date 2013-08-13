@@ -1,8 +1,8 @@
 <div class="inner-940">
-  <h1>Listing posts</h1>
+  <h1>Escritos</h1>
 
   <table>
-    <thead>
+<!--     Puedo quitar todas las tablas, Carlangas? <thead>
       <tr>
         <th>User</th>
         <th>Title</th>
@@ -12,13 +12,13 @@
         <th></th>
         <th></th>
       </tr>
-    </thead>
+    </thead> -->
 
     <tbody>
       <% @posts.each do |post| %>
         <tr>
-          <td><%= post.user_id %></td>
-          <td><%= post.title %></td>
+          <!-- <td><%= post.user_id %></td> -->
+          <td><h1><%= post.title %><h1></td>
           <td><%= post.category %></td>
           <td><%= post.body %></td>
           <td><%= link_to 'Show', post %></td>
