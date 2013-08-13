@@ -1,14 +1,14 @@
 <% provide(:title, @user.username) %>
 <div class="container profile">
     <div class="row-fluid">
-      <div class="span2">
+      <div class="span2 user">
       <h4 class="username"><%= @user.username %> </h4>
-  	   <li><%= link_to "Home", root_path %></li>
+  	   <!-- <li><%= link_to "Home", root_path %></li> -->
        <% if current_user == @user %>
-       <li><%= link_to "Escribir algo nuevo", new_post_path %></li>
+       <div class="write-something"><%= link_to "Escribir algo nuevo", new_post_path %></div>
        <% end %>
       </div>
-      <div class="span10">
+      <div class="span10 escritos">
       <% if @user.posts.any? %>
         <h4>Escritos</h4>
               <%= render template: "posts/index" %>

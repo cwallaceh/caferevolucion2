@@ -59,7 +59,18 @@ section {
   padding: 10px 0;
 }
 .username {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: capitalize;
+}
+.username:before {
+  background: none repeat scroll 0 0 #57ad68;
+  border-radius: 50px 50px 50px 50px;
+  content: "";
+  display: block;
+  height: 100px;
+  margin-bottom: 20px;
   text-transform: uppercase;
+  width: 100px;
 }
 #main {
   min-width: 1005px;
@@ -166,8 +177,31 @@ ul.navbar.pull-right li {
 .front-wrapper {
 
 }
-.profile {
-  margin-top: 30px;
+.container.profile {
+  width: 100%;
+}
+.container.profile .user {
+  background-color: #F0EEEB;
+  height: 600px;
+  width: 20%;
+  padding: 30px 40px;
+}
+.container.profile .escritos {
+  width: 77%;
+}
+.container.profile .username {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: capitalize;
+}
+.container.profile .username:before {
+  background: none repeat scroll 0 0 #57ad68;
+  border-radius: 50px 50px 50px 50px;
+  content: "";
+  display: block;
+  height: 100px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  width: 100px;
 }
 /* Modal specific styles */
 input[type="submit"] {
