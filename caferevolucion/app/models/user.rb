@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
-  rolify
-  
+
   validates :username, presence: true
+  validates :email, presence: true
   validates :username, :uniqueness => {:case_sensitive => false}
   validates :email, :uniqueness => {:case_sensitive => false}
   # Include default devise modules. Others available are:
@@ -10,4 +10,5 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :posts, dependent: :destroy
+
 end
