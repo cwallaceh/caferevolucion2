@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+#after_create :assign_default_role
+
   validates :username, presence: true
   validates :email, presence: true
   validates :username, :uniqueness => {:case_sensitive => false}
@@ -10,5 +12,11 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :posts, dependent: :destroy
+
+private 
+
+    #def assign_default_role
+    # self.add_role "author"
+    #end
 
 end
