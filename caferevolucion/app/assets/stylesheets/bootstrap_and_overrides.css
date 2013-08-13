@@ -10,6 +10,7 @@
 /*Custom Fonts*/
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&subset=latin,cyrillic-ext);
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700|Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 /*Custom CSS for bootstrap classes*/
 p {
   font-family: 'Roboto', sans-serif;
@@ -153,62 +154,20 @@ ul.navbar.pull-right li {
 .well {
   position: absolute;
 }
-#about {
-  height: 520px;
+#front, #about {
+  padding: 250px 10%;
   text-align: center;
   color: #FFFFFF;
   background-color: #00B27B;
 }
-/*Columns*/
-#intro .row .span4 {
-  margin-right: 1.25197%;
-  min-height: 1px;
-  text-align: center;
+#about {
+  background-color: #cbcbcb;
 }
-#intro .row .span4.first {
-  margin-left: 60px;
+.front-wrapper {
+
 }
-#intro .row .span4 h2 {
-  font-size: 1.1rem;
-}
-#intro .row .span4 p {
-  font-size: .875rem;
-}
-#intro .row .span4 .signup.btn {
- display: none;
-}
-#intro .row .span4:hover .signup.btn{
-  display: block;
-}
-.latest {
-  width: 50%;
-  float: left;
-}
-.latest.one, .popular.one {
-  width: 33.33%;
-  height: 10px;
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
-  float: left;
-  margin-top: 25px;
-}
-.latest.two, .popular.two {
-  float: left;
-  width: 33.33%;
-  height: 10px;
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
-  margin-top: 25px;
-}
-h2.latest, h2.popular {
-  float: left;
-  padding-left: 10px;
-  padding-right: 10px;
-  width: auto;
-}
-.popular {
-  width: 50%;
-  float: right;
+.profile {
+  margin-top: 30px;
 }
 /* Modal specific styles */
 input[type="submit"] {
