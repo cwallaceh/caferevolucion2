@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  rolify
+
+rolify
 
 after_create :assign_default_role
 
