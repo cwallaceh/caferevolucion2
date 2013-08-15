@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
+  rolify
 
-#after_create :assign_default_role
+after_create :assign_default_role
 
   validates :username, presence: true
   validates :email, presence: true
@@ -15,8 +16,8 @@ class User < ActiveRecord::Base
 
 private 
 
-    #def assign_default_role
-    # self.add_role "author"
-    #end
+    def assign_default_role
+     self.add_role :author
+    end
 
 end
