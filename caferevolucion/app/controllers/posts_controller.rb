@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :signed_in_user, only: [:create, :destroy, :update]
-  load_and_authorize_resource
+  before_action :signed_in_user, only: [:destroy, :update]
+  load_and_authorize_resource :except => [:create]
 
   def signed_in_user
     unless signed_in?

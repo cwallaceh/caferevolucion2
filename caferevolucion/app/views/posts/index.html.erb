@@ -1,37 +1,22 @@
 <div class="inner-940">
   <h1>Escritos</h1>
 
-  <table>
-<!--     Puedo quitar todas las tablas, Carlangas? <thead>
-      <tr>
-        <th>User</th>
-        <th>Title</th>
-        <th>Category</th>
-        <th>Body</th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead> -->
-
-    <tbody>
       <% @posts.each do |post| %>
-        <tr>
           <!-- <td><%= post.user_id %></td> -->
-          <td><h1><%= post.title %><h1></td>
-          <td><%= post.category %></td>
-          <td><%= post.body %></td>
+          <h2><%= post.title %></h2>
+          <hr>
+          <%= post.category %><br>
+          <p><%= post.body %></p>
+          <hr>
           <td><%= link_to 'Leer', post %></td>
           <% if can? :update, post %>
-          <td><%= link_to 'Edit', edit_post_path(post) %></td>
+          |<td><%= link_to 'Editar', edit_post_path(post) %></td>
           <% end %>
           <% if can? :destroy, post %>
-          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          |<td><%= link_to 'Borrar', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
         </tr>
       <% end %>
-    </tbody>
-  </table>
 
   <br>
 
