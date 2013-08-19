@@ -35,8 +35,6 @@ GEM
     atomic (1.1.10)
     bcrypt-ruby (3.1.1)
     bcrypt-ruby (3.1.1-x86-mingw32)
-    bootstrap-will_paginate (0.0.9)
-      will_paginate
     builder (3.1.4)
     cancan (1.6.10)
     coffee-rails (4.0.0)
@@ -138,7 +136,6 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  bootstrap-will_paginate
   cancan
   coffee-rails (~> 4.0.0)
   devise

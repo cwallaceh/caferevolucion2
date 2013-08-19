@@ -42,9 +42,8 @@ gem "cancan"
 # Rolify
 gem "rolify", :git => "git://github.com/EppO/rolify.git"
 
-# Paginas diferentes con gemas (ojala al final fuera infinte scroll)
+# Paginas diferentes con gemas
 gem 'will_paginate'
-gem 'bootstrap-will_paginate'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
