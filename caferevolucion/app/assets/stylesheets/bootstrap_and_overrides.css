@@ -22,7 +22,10 @@ a:hover {
   text-decoration: underline;
   background-color: transparent;
 }
-h1,h2,h3 {
+h1 {
+  font-family:'Chaparral Pro';
+}
+h2,h3 {
   font-family: 'Montserrat', sans-serif;
 }
 label[for="user_remember_me"] {
@@ -168,8 +171,13 @@ ul.navbar.pull-right li {
 #front, #about {
   padding: 250px 10%;
   text-align: center;
-  color: #FFFFFF;
-  background-color: #00B27B;
+  color: #000;
+}
+.front #front:nth-child(odd) {
+  background:none repeat scroll #F0EEEB;
+}
+#front h1, #about h1 {
+  font-size: 70px;
 }
 #about {
   background-color: #cbcbcb;
