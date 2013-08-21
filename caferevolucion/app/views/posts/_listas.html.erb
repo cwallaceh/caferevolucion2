@@ -1,0 +1,14 @@
+<% @posts.each do |post| %>
+    <h2><%= post.title %></h2>
+    <hr>
+    <%= post.category %><br>
+    <p><%= post.body %></p>
+    <hr>
+    <td><%= link_to 'Leer', post %></td>
+    <% if can? :update, post %>
+    |<td><%= link_to 'Editar', edit_post_path(post) %></td>
+    <% end %>
+    <% if can? :destroy, post %>
+    |<td><%= link_to 'Borrar', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+<% end %>
