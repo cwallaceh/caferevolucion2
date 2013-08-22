@@ -14,6 +14,10 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = current_user.posts.page(params[:page])
+    respond_to do |format|
+      format.html
+      format.js # add this line for your js template
+    end
   end
 
   # GET /posts/1
