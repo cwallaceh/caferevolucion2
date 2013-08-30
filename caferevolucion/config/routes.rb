@@ -2,11 +2,17 @@ Caferevolucion::Application.routes.draw do
 
   resources :posts
 
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+
   #Base de usuarios
   devise_for :users
 
   #Ruta para profiles
-  get '/users/show/:id', :to => "users#show", :as => :user
+  get '/users/show/:id', :to => "users#show"#, :as => :user
 
   root :to => 'browse#home'
   get "browse/aboutus"
