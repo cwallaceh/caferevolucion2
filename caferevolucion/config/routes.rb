@@ -2,7 +2,7 @@ Caferevolucion::Application.routes.draw do
 
   resources :posts
 
-  resources :users do
+  resources :users, only: [:following, :followers] do
     member do
       get :following, :followers
     end
@@ -12,7 +12,7 @@ Caferevolucion::Application.routes.draw do
   devise_for :users
 
   #Ruta para profiles
-  get '/users/show/:id', :to => "users#show"#, :as => :user
+  get '/users/show/:id', :to => "users#show", :as => :user
 
   root :to => 'browse#home'
   get "browse/aboutus"
