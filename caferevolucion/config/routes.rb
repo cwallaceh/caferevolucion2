@@ -2,6 +2,12 @@ Caferevolucion::Application.routes.draw do
 
   resources :posts
 
+  resources :users, only: [:following, :followers] do
+    member do
+      get :following, :followers
+    end
+  end
+
   #Base de usuarios
   devise_for :users
 

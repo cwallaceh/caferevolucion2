@@ -15,4 +15,5 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require tinymce-jquery
+//= require jquery.inview.min.js
 //= require_tree .
