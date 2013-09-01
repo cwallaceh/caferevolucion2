@@ -65,16 +65,7 @@ section {
   font-family: 'Open Sans', sans-serif;
   text-transform: capitalize;
 }
-.username:before {
-  background: none repeat scroll 0 0 #57ad68;
-  border-radius: 50px 50px 50px 50px;
-  content: "";
-  display: block;
-  height: 100px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  width: 100px;
-}
+
 #main {
   min-width: 1005px;
   position: relative;
@@ -185,6 +176,7 @@ ul.navbar.pull-right li {
 .front-wrapper {
 
 }
+/* USER PROFILE */
 .container.profile {
   width: 100%;
 }
@@ -193,15 +185,17 @@ ul.navbar.pull-right li {
   height: 600px;
   width: 20%;
   padding: 30px 40px;
+  position: fixed;
 }
 .container.profile .escritos {
+  margin-left: 20%;
   width: 77%;
 }
 .container.profile .username {
   font-family: 'Open Sans', sans-serif;
   text-transform: capitalize;
 }
-.container.profile .username:before {
+/*.container.profile .username:before {
   background: none repeat scroll 0 0 #57ad68;
   border-radius: 50px 50px 50px 50px;
   content: "";
@@ -210,7 +204,32 @@ ul.navbar.pull-right li {
   margin-bottom: 20px;
   text-transform: uppercase;
   width: 100px;
+}*/
+#octagon {
+   width: 100px; 
+   height: 100px; 
+   background: #57ad68;
 }
+#octagon:before {
+   height: 0;
+   width: 40px;
+   content:"";
+   position: absolute; 
+   border-bottom: 30px solid #57ad68;
+   border-left: 31px solid #F0EEEB; 
+   border-right: 30px solid #F0EEEB; 
+}
+#octagon:after {
+   height: 0;
+   width: 40px;
+   content:"";
+   position: absolute; 
+   border-top: 31px solid #57ad68; 
+   border-left: 30px solid #F0EEEB;  
+   border-right: 31px solid #F0EEEB; 
+   margin: 70px 0 0 0;
+}
+
 /* Modal specific styles */
 input[type="submit"] {
     background: none repeat scroll 0 0 #00B27B;
