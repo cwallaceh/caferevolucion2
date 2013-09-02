@@ -8,6 +8,8 @@ Caferevolucion::Application.routes.draw do
     end
   end
 
+  resources :relationships, only: [:create, :destroy]
+
   #Base de usuarios
   devise_for :users
 
