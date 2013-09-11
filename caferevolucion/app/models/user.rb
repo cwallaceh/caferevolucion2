@@ -4,6 +4,7 @@ rolify
 
 after_create :assign_default_role
 
+  #User sign_up
   validates :username, presence: true
   validates :email, presence: true
   validates :username, :uniqueness => {:case_sensitive => false}
@@ -13,7 +14,11 @@ after_create :assign_default_role
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  #Posts
   has_many :posts, dependent: :destroy
+
+  #Follows
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
   has_many :followed_users, through: :relationships, source: :followed
   has_many :reverse_relationships, foreign_key: "followed_id",
