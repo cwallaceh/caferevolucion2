@@ -6,7 +6,6 @@ before_filter :authenticate_user!
     current_user.follow!(@user)
     respond_to do |format|
       format.html { redirect_to @user }
-      format.js
     end
   end
 
@@ -15,7 +14,6 @@ before_filter :authenticate_user!
     current_user.unfollow!(@user)
     respond_to do |format|
       format.html { redirect_to @user }
-      format.js
     end
   end
 end
