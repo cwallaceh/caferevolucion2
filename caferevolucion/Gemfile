@@ -35,6 +35,10 @@ gem "twitter-bootstrap-rails"
 
 # Devise para el control de usuarios
 gem "devise"
+gem 'omniauth'
+gem 'omniauth-facebook'
+
+gem 'certified'
 
 # CanCan para roles
 gem "cancan"
