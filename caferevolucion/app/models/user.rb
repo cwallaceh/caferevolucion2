@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
 
 rolify
 
+mount_uploader :avatar, AvatarUploader
+
 after_create :assign_default_role
 
   #User sign_up
@@ -9,6 +11,10 @@ after_create :assign_default_role
   validates :email, presence: true
   validates :username, :uniqueness => {:case_sensitive => false}
   validates :email, :uniqueness => {:case_sensitive => false}
+
+  validates_presence_of   :avatar
+  validates_integrity_of  :avatar
+  validates_processing_of :avatar
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
