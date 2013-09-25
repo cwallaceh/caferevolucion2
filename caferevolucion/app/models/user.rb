@@ -44,7 +44,8 @@ after_create :assign_default_role
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
   user = User.where(:provider => auth.provider, :uid => auth.uid).first
   unless user
-    user = User.create(name:auth.extra.raw_info.name,
+    user = User.create(username:auth.username,
+                         name:auth.extra.raw_info.name,
                          provider:auth.provider,
                          uid:auth.uid,
                          email:auth.info.email,
@@ -60,6 +61,10 @@ after_create :assign_default_role
         user.email = data["email"] if user.email.blank?
       end
     end
+  end
+
+  def password_required?
+    super && provider.blank?
   end
 
 private 

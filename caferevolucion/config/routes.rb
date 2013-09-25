@@ -11,7 +11,7 @@ Caferevolucion::Application.routes.draw do
   resources :relationships, only: [:create, :destroy]
 
   #Base de usuarios
-  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   #Ruta para profiles
   get '/users/show/:id', :to => "users#show", :as => :user

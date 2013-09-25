@@ -38,6 +38,7 @@ gem "devise"
 gem 'omniauth'
 gem 'omniauth-facebook'
 
+# Antibugs
 gem 'certified'
 
 # CanCan para roles
