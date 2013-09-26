@@ -2,24 +2,28 @@
 <div class="container profile">
     <div class="row-fluid">
       <div class="span2 user">
-        <div id="octagon"></div>
+        <div id="avatar"></div>
         <% @user ||= current_user %>
         <h4 class="username"><%= @user.username %> </h4>
   	     <!-- <li><%= link_to "Home", root_path %></li> -->
 
-        <a href="<%= following_user_path(@user) %>">
-          <strong id="following" class="stat">
-            <%= @user.followed_users.count %>
-          </strong>
-            following
-        </a>
+        <div>
+          <a href="<%= following_user_path(@user) %>">
+            <strong id="following" class="stat">
+              <%= @user.followed_users.count %>
+            </strong>
+              following
+          </a>
+        </div>
       
-        <a href="<%= followers_user_path(@user) %>">
-          <strong id="followers" class="stat">
-            <%= @user.followers.count %>
-          </strong>
-            followers
-        </a>
+        <div>
+          <a href="<%= followers_user_path(@user) %>">
+            <strong id="followers" class="stat">
+              <%= @user.followers.count %>
+            </strong>
+              followers
+          </a>
+        </div>
       
         <% unless current_user == @user %>
       
