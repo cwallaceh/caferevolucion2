@@ -43,7 +43,11 @@ gem "devise"
 gem 'omniauth'
 gem 'omniauth-facebook'
 
+# Antibugs
 gem 'certified'
+
+# Imagenes
+gem 'carrierwave'
 
 # CanCan para roles
 gem "cancan"
