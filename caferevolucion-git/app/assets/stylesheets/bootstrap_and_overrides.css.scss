@@ -1,0 +1,264 @@
+/*
+ * generated with CSS2Compass.class.php by Sebastian Pontow
+ * http://sebastianpontow.de/css2compass/
+ * Contact: me@sebastianpontow.de
+ */
+@import "bootstrap";
+/*Custom Fonts*/
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&subset=latin,cyrillic-ext);
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700|Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Oxygen:400,700,300);
+/*@import "compass/css3";*/
+@import "base";
+
+body {
+  padding-top: 120px;
+}
+%extend_1 {
+  padding: 250px 10%;
+  text-align: center;
+  color: $color_0;
+}
+0 {
+  font-family: 'Oxygen', sans-serif;
+}
+1 {
+  font-family: 'Oxygen', sans-serif;
+  /* (1) font-family was set before: old value: 'Roboto', sans-serif - new value 'Roboto', sans-serif */;
+}
+2 {
+  font-family: 'Oxygen', sans-serif;
+}
+
+a {
+  font-family: 'Oxygen', sans-serif;
+  &:hover {
+    text-decoration: underline;
+    background-color: transparent;
+  }
+}
+h1 {
+  font-family: 'Chaparral Pro';
+}
+h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+label[for="user_remember_me"] {
+  display: inline;
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+header {
+  background: $color_0;
+  height: 440px;
+  text-align: center;
+  color: $color_1;
+  padding: 140px 0 0;
+  position: relative;
+}
+section {
+  padding: 100px 10%;
+  text-align: center;
+}
+.inner-940 {
+  width: 940px;
+  margin: 0 auto;
+}
+.inner-420 {
+  width: 420px;
+  margin: 30px auto;
+}
+.title {
+  color: $color_2;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+  padding: 10px 0;
+}
+.username {
+  text-transform: capitalize;
+}
+#main {
+  min-width: 1005px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 30px;
+  &.front {
+    margin-top: 0px;
+  }
+  > header {
+    .hero-unit {
+      background: url('/images/homepage-1-opacidad65.png') no-repeat center center fixed;
+      width: 100%;
+      height: 460px;
+      border-radius: 0px;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 0;
+      opacity: .9;
+    }
+  }
+}
+/* Navigation Styles */
+.navbar {
+  background: none repeat scroll 0 0 $color_1;
+  border-radius: 0px;
+  margin: 0;
+  border-bottom: 1px solid $color_3;
+  height: 120px;
+  line-height: 120px;
+  .nav {
+    margin: 0;
+    li {
+      height: 110px;
+      line-height: 110px;
+      &:hover {
+        border-bottom: 5px solid $color_2;
+      }
+      a {
+        padding: 0 40px;
+      }
+    }
+  }
+  .nav-collapse {
+    height: 110px;
+    width: 960px;
+    margin: 0 auto;
+    &.full {
+      width: auto;
+    }
+  }
+  #logo {
+    background: url("/images/logo.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 150px;
+    margin: 8px auto 0;
+    position: relative;
+    width: 156px;
+    z-index: 8888;
+    float: none;
+    background-size: 156px;
+    background-color: $color_1;
+    border-radius: 75px;
+  }
+  a {
+    color: $color_4;
+    font-size: 13px;
+    text-transform: uppercase;
+    float: right;
+  }
+}
+ul {
+  &.pull-right, &.pull-left {
+    height: 110px;
+  }
+  &.navbar.pull-right {
+    li {
+      float: right;
+      position: relative;
+    }
+  }
+  &.navbar.pull-left {
+    li {
+      float: left;
+      position: relative;
+    }
+  }
+}
+.navbar-brand {
+  float: left !important;
+}
+.well {
+  position: absolute;
+}
+/* Front Styles */
+#front {
+  @extend %extend_1;
+  h1 {
+    font-size: 70px;
+  }
+}
+#about {
+  @extend %extend_1;
+  background-color: $color_6;
+  h1 {
+    font-size: 70px;
+  }
+}
+.front-wrapper {
+}
+.hero-unit .logo {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 50%;
+  top: 50%;
+  margin-left: -50px;
+  margin-top: -100px;
+  a:hover {
+    background-color: transparent;
+  }
+}
+.front #front {
+  &:nth-child(odd) {
+    background: none repeat scroll $color_5;
+  }
+}
+/* */
+/* Form Styles */
+input[type="submit"] {
+  background: none repeat scroll 0 0 $color_2;
+  border-radius: 2px;
+  color: $color_1;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 11px 22px;
+  margin-top: 10px;
+}
+.signup > {
+  a {
+    color: $color_1;
+  }
+}
+/*Profile Styles */
+.container.profile {
+  width: 100%;
+  .user {
+    background-color: $color_5;
+    height: 600px;
+    width: 20%;
+    padding: 30px 40px;
+    position: fixed;
+    text-align: center;
+  }
+  .escritos {
+    margin-left: 20%;
+    width: 77%;
+  }
+  .username {
+    text-transform: capitalize;
+  }
+  #avatar {
+    background: $color_2;
+    border-radius: 50px;
+    height: 100px;
+    margin: 0 auto;
+    width: 100px;
+  }
+}
+/* Posts Styles */
+.escritos {
+  .post {
+    border-top: 2px solid $color_1;
+    padding: 10px 0;
+  }
+}

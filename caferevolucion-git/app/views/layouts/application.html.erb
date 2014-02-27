@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Café Revolución</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <script type="text/javascript">
+  $(document).ready(function() {
+  function filterPath(string) {
+  return string
+    .replace(/^\//,'')
+    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+    .replace(/\/$/,'');
+  }
+  var locationPath = filterPath(location.pathname);
+  var scrollElem = scrollableElement('html', 'body');
+ 
+  $('a[href*=#]').each(function() {
+    var thisPath = filterPath(this.pathname) || locationPath;
+    if (  locationPath == thisPath
+    && (location.hostname == this.hostname || !this.hostname)
+    && this.hash.replace(/#/,'') ) {
+      var $target = $(this.hash), target = this.hash;
+      if (target) {
+        var targetOffset = $target.offset().top;
+        $(this).click(function(event) {
+          event.preventDefault();
+          $(scrollElem).animate({scrollTop: targetOffset}, 1000, function() {
+            location.hash = target;
+          });
+        });
+      }
+    }
+  });
+ 
+  // use the first element that is "scrollable"
+  function scrollableElement(els) {
+    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
+      var el = arguments[i],
+          $scrollElement = $(el);
+      if ($scrollElement.scrollTop()> 0) {
+        return el;
+      } else {
+        $scrollElement.scrollTop(1);
+        var isScrollable = $scrollElement.scrollTop()> 0;
+        $scrollElement.scrollTop(0);
+        if (isScrollable) {
+          return el;
+        }
+      }
+    }
+    return [];
+  }
+ 
+});
+  </script>
+</head>
+<body>
+
+<!-- Empieza menú -->
+<div class='navbar navbar-fixed-top'>
+    <!-- <div class='container'> -->
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">  
+              <span class="icon-bar"></span>  
+              <span class="icon-bar"></span>  
+              <span class="icon-bar"></span>  
+      </a>
+      <% if user_signed_in? %>
+      <div class='nav-collapse'>
+        <ul class="nav pull-left">
+          <li class="disabled"><a href="#">Ciao, <%= current_user.username %>!</a></li>
+          <li><%= link_to "Profile", current_user %></li>
+        </ul>
+        <ul class="nav pull-right">         
+          <li><%= link_to "Admin tools", users_index_path %></li>
+          <li><%= link_to "Edit", edit_user_registration_path %></li>
+		      <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+        </ul>
+        <a id="logo" href="/"></a>
+          <% else %>
+      <div class='nav-collapse full'>
+        <ul class="nav pull-right"> 
+          <li><a href="#about">Acerca</a></li> 
+          <li><a class="menu-modal" data-toggle="modal" href="#modal-signup" >Sign up</a></li>
+          <li><a class="menu-modal" data-toggle="modal" href="#modal-signin" >Sign in</a></li>
+          <li class="divider-vertical"><%= link_to "Entrar con Facebook", user_omniauth_authorize_path(:facebook) %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>  
+</div>
+<!-- Termina menú -->
+<div class="modal hide fade in" id="modal-signup">
+   <%= render :template => "devise/registrations/new" %>
+</div>
+<div class="modal hide fade in" id="modal-signin">
+   <%= render :template => "devise/sessions/new" %>
+</div>
+<!-- Comineza contenido -->
+<% if user_signed_in? %>
+  <div class="content">
+    <%= yield %>
+  </div>
+<% else %>
+  <div id="main" class="front">
+    <%= yield %>
+  </div>
+<% end %>
+<!-- Termina contenido -->
+
+    <!-- Le javascript  -->
+    <script src="twitter-bootstrap-v2/docs/assets/js/jquery.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-transition.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-alert.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-modal.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-dropdown.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-scrollspy.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-tab.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-tooltip.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-popover.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-button.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-collapse.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-carousel.js"></script>  
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-typeahead.js"></script>
+
+</body>
+</html>

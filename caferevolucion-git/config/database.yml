@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: caferevolucion-git_development
+  pool: 5
+  username: aliciagonzalez21
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: caferevolucion-git_test
+  pool: 5
+  username: aliciagonzalez21
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: caferevolucion-git_production
+  pool: 5
+  username: aliciagonzalez21
+  password:

@@ -1,0 +1,3 @@
+.inner-940.post
+  = render :partial => 'posts/posts', :locals => { :posts => @posts }
+= link_to 'Cargando mas escritos', posts_path(:page => @posts.next_page), :class => 'load-more-posts', :remote => true if @posts.next_page
